@@ -1,0 +1,121 @@
+/* 
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+ */
+
+/* || General */
+
+
+/* || Typography */
+
+
+/* || Layout */
+
+
+/* || Header */
+
+
+/* || Section */
+
+
+/* || Footer */
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* || Media query for ipads/tablets breakpoint */
+
+@media screen and (min-width: 30.0625em) {
+
+    /* || General */
+
+
+    /* || Typography */
+
+
+    /* || Layout */
+
+
+    /* || Header */
+
+
+    /* || Section */
+
+
+    /* || Footer */
+    
+}
+
+/* || Media query for small screens/laptops breakpoint */
+
+@media screen and (min-width: 48.0625em) {
+
+    /* || General */
+
+
+    /* || Typography */
+
+
+    /* || Layout */
+
+
+    /* || Header */
+
+
+    /* || Section */
+
+
+    /* || Footer */
+    
+}
+
+/* || Media query for Desktops/large screens breakpoint */
+
+@media screen and (min-width: 64.0625em) {
+
+    /* || General */
+
+
+    /* || Typography */
+
+
+    /* || Layout */
+
+
+    /* || Header */
+
+
+    /* || Section */
+
+
+    /* || Footer */
+    
+}
+
+/* || Media query for EX screens/TV breakpoint */
+
+@media screen and (min-width: 75.0625em) {
+
+    /* || General */
+
+
+    /* || Typography */
+
+
+    /* || Layout */
+
+
+    /* || Header */
+
+
+    /* || Section */
+
+
+    /* || Footer */
+    
+}
