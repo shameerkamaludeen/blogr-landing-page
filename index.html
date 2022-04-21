@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;500;600&family=Ubuntu:wght@400;500;700&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="styles/normalize.css">
@@ -28,62 +28,68 @@
   <header>
     <h1 class="hide-visually">Blogr</h1>
 
-    <div class="header ctr-content">
-      <nav>
-        <ul class="nav">
-          <li class="nav-logo">
-            <div class="wr-logo"><a href="index.html" aria-label="Home page"><img src="images/logo.svg"
-                  alt="Blogr logo"></a></div>
-          </li>
+    <nav>
+      <ul class="nav">
+        <li class="nav-logo">
+          <div class="wr-logo">
+            <a href="index.html" aria-label="Home page"><img src="images/logo.svg" alt="Blogr logo"></a>
+          </div>
+        </li>
 
-          <li class="nav-menu">
+        <li class="nav-menu">
 
-            <div class="wr-hamburger"><img src="images/icon-hamburger.svg" alt="Menu"></div>
+          <div class="wr-hamburger"><img src="images/icon-hamburger.svg" alt="Menu"></div>
 
+          <div class="wr-links">
             <ul class="links">
 
-              <li class="menu-product">
-                <a href="#">Product <span class="caret"></span></a>
-                <ul class="sub-product">
-                  <li><a href="#">Overview</a></li>
-                  <li><a href="#">Pricing</a></li>
-                  <li><a href="#">Marketplace</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Integrations</a></li>
-                </ul>
+              <li class="wr-mainmenu">
+                <a href="#" class="main-menu">Product <span class="caret"></span></a>
+                <div class="wr-submenu">
+                  <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Integrations</a></li>
+                  </ul>
+                </div>
               </li>
 
-              <li class="menu-company">
-                <a href="#">Company <span class="caret"></span></a>
-                <ul class="sub-company">
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Team</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Careers</a></li>
-                </ul>
+              <li class="wr-mainmenu">
+                <a href="#" class="main-menu">Company <span class="caret"></span></a>
+                <div class="wr-submenu">
+                  <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                  </ul>
+                </div>
               </li>
 
-              <li class="menu-connect">
-                <a href="#">Connect <span class="caret"></span></a>
-                <ul class="sub-connect">
-                  <li href="#">Contact</li>
-                  <li href="#">Newsletter</li>
-                  <li href="#">LinkedIn</li>
-                </ul>
+              <li class="wr-mainmenu">
+                <a href="#" class="main-menu">Connect <span class="caret"></span></a>
+                <div class="wr-submenu">
+                  <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                  </ul>
+                </div>
                 <hr>
               </li>
 
-              <li class="menu-login"><a href="#" class="login">Login</a></li>
+              <li class="wr-mainmenu menu-login"><a href="#" class="login">Login</a></li>
 
-              <li class="menu-signup"><a href="#" class="sign-up">Sign Up</a></li>
+              <li class="wr-mainmenu menu-signup"><a href="#" class="sign-up">Sign Up</a></li>
             </ul>
+          </div>
 
-          </li>
-        </ul>
+        </li>
+      </ul>
 
-      </nav>
-    </div>
-
+    </nav>
   </header>
 
   <main>
@@ -97,24 +103,26 @@
 
           <div class="action">
             <a href="#" class="start">Start for Free</a>
-            <a href="" class="learn-more">Learn More</a>
+            <a href="#" class="learn-more">Learn More</a>
           </div>
 
         </div>
       </div>
 
-      <section>
+      <section class="article-body">
 
         <h3 class="ctr-content">Designed for the future</h3>
 
         <div class="intro">
 
-          <div class="wr-editorimg ctr-content">
-            <picture>
-              <source media="(max-width: 30em)" srcset="images/illustration-editor-mobile.svg">
-              <source media="(min-width: 30.0625em)" srcset="images/illustration-editor-desktop.svg">
-              <img src="images/illustration-editor-desktop.svg" alt="Illustration of editor">
-            </picture>
+          <div class="wr-editorimg">
+            <div class="wr-img">
+              <picture>
+                <source media="(max-width: 30em)" srcset="images/illustration-editor-mobile.svg">
+                <source media="(min-width: 30.0625em)" srcset="images/illustration-editor-desktop.svg">
+                <img src="images/illustration-editor-desktop.svg" alt="Illustration of editor">
+              </picture>
+            </div>
           </div>
 
           <div class="cnt-intro ctr-content">
@@ -135,30 +143,36 @@
 
         </div>
 
-        <div class="infra ctr-content">
+        <div class="infra">
+          <div class="ctr-content">
 
-          <h4>State of the Art Infrastructure</h4>
+            <div class="wr-mobileimg">
+              <div class="wr-img">
+                <img src="images/illustration-phones.svg" alt="Illustration of mobile phones">
+              </div>
+            </div>
 
-          <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
-            connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your
-            site competitive.</p>
+            <h4>State of the Art Infrastructure</h4>
 
-          <div class="wr-mobileimg">
-            <img src="images/illustration-phones.svg" alt="Illustration of mobile phones">
+            <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
+              connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your
+              site competitive.</p>
           </div>
         </div>
 
-        <div class="feature ctr-content">
+        <div class="feature">
 
           <div class="wr-laptopimg">
-            <picture>
-              <source media="(max-width: 30em)" srcset="images/illustration-laptop-mobile.svg">
-              <source media="(min-width: 30.0625em)" srcset="images/illustration-laptop-desktop.svg">
-              <img src="images/illustration-laptop-desktop.svg" alt="Illustration of laptop">
-            </picture>
+            <div class="wr-img">
+              <picture>
+                <source media="(max-width: 30em)" srcset="images/illustration-laptop-mobile.svg">
+                <source media="(min-width: 30.0625em)" srcset="images/illustration-laptop-desktop.svg">
+                <img src="images/illustration-laptop-desktop.svg" alt="Illustration of laptop">
+              </picture>
+            </div>
           </div>
 
-          <div class="ctn-feature">
+          <div class="ctn-feature ctr-content">
 
             <h4>Free, open, simple</h4>
 
@@ -180,51 +194,60 @@
   </main>
 
   <footer>
-    <div class="ctr-content">
 
-      <img src="images/logo.svg" alt="Blogr">
+    <nav>
+      <ul class="nav">
 
-      <nav>
-        <ul class="nav">
+        <li class="nav-logo">
+          <div class="wr-logo">
+            <a href="index.html" aria-label="Home page"><img src="images/logo.svg" alt="Blogr logo"></a>
+          </div>
+        </li>
 
-          <li class="menu-product">
-            <a href="#">Product</a>
-            <ul class="sub-product">
+        <li>
+          <div class="main-menu"><span>Product</span></div>
+          <div class="wr-submenu">
+            <ul>
               <li><a href="#">Overview</a></li>
               <li><a href="#">Pricing</a></li>
               <li><a href="#">Marketplace</a></li>
               <li><a href="#">Features</a></li>
               <li><a href="#">Integrations</a></li>
             </ul>
-          </li>
+          </div>
+        </li>
 
-          <li class="menu-company">
-            <a href="#">Company</a>
-            <ul class="sub-company">
+        <li>
+          <div class="main-menu"><span>Company</span></div>
+          <div class="wr-submenu">
+            <ul>
               <li><a href="#">About</a></li>
               <li><a href="#">Team</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Careers</a></li>
             </ul>
-          </li>
+          </div>
+        </li>
 
-          <li class="menu-connect">
-            <a href="#">Connect</a>
-            <ul class="sub-connect">
-              <li href="#">Contact</li>
-              <li href="#">Newsletter</li>
-              <li href="#">LinkedIn</li>
+        <li>
+          <div class="main-menu"><span>Connect</span></div>
+          <div class="wr-submenu">
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">LinkedIn</a></li>
             </ul>
-            <hr>
-          </li>
+          </div>
+        </li>
 
-        </ul>
-      </nav>
+      </ul>
+    </nav>
 
-      <div class="attribution">
+    <div class="attribution">
+      <p class="ctr-content">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
-        <a href="https://twitter.com/ShameerKamalud1">Shameer Kamaludeen</a>.
-      </div>
+        <a href="https://twitter.com/ShameerKamalud1" target="_blank">Shameer Kamaludeen</a>.
+      </p>
     </div>
 
   </footer>
