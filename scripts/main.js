@@ -26,7 +26,7 @@ document.addEventListener('click', e => {
     let isClickedMenu = false;
 
     // checking the click is on or inside the menu container for smaller devices
-    if (document.documentElement.clientWidth <= 769) {
+    if (document.documentElement.clientWidth <= 848) {
         if (document.querySelector('header .wr-links').classList.contains('active')) {
             // here the 'elements.length - 2' is for ignoring last two element (document and window) 
             for (let index = 0; index < elements.length - 2; index++) {

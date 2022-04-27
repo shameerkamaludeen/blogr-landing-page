@@ -409,6 +409,7 @@ header .sign-up:focus {
 .intro .wr-editorimg {
     height: 88.3vw;
     position: relative;
+    max-height: 46em;
 }
 
 .intro .wr-img {
@@ -477,6 +478,7 @@ header .sign-up:focus {
 .feature .wr-laptopimg {
     height: 96vw;
     position: relative;
+    max-height: 46em;
 }
 
 .feature .wr-img {
@@ -589,6 +591,22 @@ footer .wr-submenu a:focus {
         left: initial;
     }
 
+    /* || Block intro */
+        
+    .intro .wr-editorimg .wr-img img {
+        object-fit: contain;
+    }
+
+    /* || Block feature */
+
+    .feature .wr-laptopimg {
+        overflow: hidden;
+    }
+
+    .feature .wr-laptopimg .wr-img img {
+        object-fit: contain;
+    }
+
     /* || Block infra*/
 
 
@@ -596,6 +614,7 @@ footer .wr-submenu a:focus {
 
 }
 
+/* || Media query for making footer break as two column */
 @media screen and (min-width: 35em) {
 
     /* || General */
@@ -694,6 +713,12 @@ footer .wr-submenu a:focus {
 
     /* || Block intro */
 
+    /* || Block feature */
+
+    .feature .wr-img {
+        left: 4%;
+    }
+    
     /* || Footer */
 
     footer .nav {
@@ -723,39 +748,10 @@ footer .wr-submenu a:focus {
     }
 }
 
-
-/* || Media query for Desktops/large screens breakpoint */
-
-@media screen and (min-width: 64.0625em) {
+/* || Media query to fix the block images and some other breakings */
+@media screen and (min-width: 53em) {
 
     /* || General */
-
-
-    /* || Typography */
-
-
-    /* || Layout */
-
-
-    /* || Header */
-
-
-    /* || Section */
-
-
-    /* || Footer */
-
-}
-
-/* || Media query for EX screens/TV breakpoint */
-
-@media screen and (min-width: 75.0625em) {
-
-    /* || General */
-
-    .body-centered {
-        width: 77%;
-    }
 
     /* || Typography */
 
@@ -773,6 +769,10 @@ footer .wr-submenu a:focus {
         line-height: 2.1;
     }
 
+    .hero h2 {
+        font-size: 2.8rem;
+    }
+
     .article-body h3 {
         font-size: 2.375rem;
     }
@@ -783,21 +783,12 @@ footer .wr-submenu a:focus {
         margin-left: 0;
         margin-right: 0;
     }
-
-    .hero h2 {
-        font-size: 3.75rem;
-    }
     
+
     /* || Layout */
 
 
     /* || Header */
-
-    header nav {
-        width: 77%;
-        margin-left: auto;
-        margin-right: auto;
-    }
 
     header .nav {
         position: initial;
@@ -937,12 +928,8 @@ footer .wr-submenu a:focus {
 
     /* || Section article body*/
 
-    .article-body {
-        margin-top: 15.5em;
-    }
-
     .article-body h3 {
-        margin-bottom: 2.8em;
+        margin-bottom: 2em;
     }
 
     /* || Article */
@@ -962,6 +949,7 @@ footer .wr-submenu a:focus {
     .intro .wr-editorimg {
         height: initial;
         position: initial;
+        max-height: initial;
     }
 
     .intro .wr-img {
@@ -969,18 +957,105 @@ footer .wr-submenu a:focus {
         right: 0;
         left: 0;
         width: 45.1%;
-        top: -23.5em;
-        height: 198%;
+        top: -8em;
+        height: 130%;
     }
 
     .intro .wr-editorimg .wr-img img {
         object-position: left center;
+        object-fit: cover;
     }
 
     .intro .wrapper-content-intro {
         width: 49%;
         margin-right: auto;
     }
+
+    /* || Block infra */
+
+    .infra {
+        margin-top: 17em;
+        padding: 4.3em 0 5em;
+        background: url(../images/bg-pattern-circles.svg) left -22em bottom -11em / 71% no-repeat, 
+        linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    }
+
+    .infra .body-centered {
+        display: flex;
+    }
+
+    .infra .wr-mobileimg {
+        flex: 0 0 51.4%;
+    }
+
+    .infra .wr-mobileimg .wr-img {
+        left: -4em;
+        right: initial;
+        margin-right: initial;
+        margin-left: initial;
+        bottom: 3em;
+        height: 44em;
+        width: 38em;
+    }
+
+    /* || Block feature */
+
+    .feature {
+        padding-top: 10em;
+        padding-bottom: 16em;
+        position: relative;
+    }
+
+    .feature .wr-laptopimg {
+        height: initial;
+        position: initial;
+        overflow: initial;
+        max-height: initial;
+    }
+
+    .feature .wr-img {
+        width: 52%;
+        height: 76.5%;
+        top: 11.6em;
+        left: initial;
+    }
+
+    .feature .wr-laptopimg .wr-img img {
+        object-position: right center;
+        object-fit: cover;
+    }
+
+    .feature .ctn-feature {
+        width: 48.7%;
+        margin-left: auto;
+    }
+
+
+    /* || Footer */
+
+}
+
+/* || Media query for large laptops */
+@media screen and (min-width: 64.0625em) {
+
+    /* || General */
+
+    /* || Typography */
+    
+
+    /* || Layout */
+
+
+    /* || Header */
+
+
+    /* || Section article body*/
+
+
+    /* || Article */
+
+    
+    /* || Block intro */
 
     .intro h4 {
         margin-bottom: 0.87em;
@@ -993,25 +1068,82 @@ footer .wr-submenu a:focus {
     /* || Block infra */
 
     .infra {
-        margin-top: 25.5em;
         padding: 6.3em 0 9em;
     }
 
-    .infra .body-centered {
-        display: flex;
+    .infra .wr-mobileimg .wr-img {
+        height: 50em;
+        width: 43em;
+        bottom: -2em;
     }
 
-    .infra .wr-mobileimg {
-        flex: 0 0 51.4%;
+    /* || Block feature */
+
+    .feature h4 {
+        margin-top: 2.72em;
+    }
+
+    /* || Footer */
+
+}
+
+/* || Media query for EX screens/TV breakpoint */
+
+@media screen and (min-width: 75.0625em) {
+
+    /* || General */
+
+    .body-centered {
+        width: 77%;
+    }
+
+    /* || Typography */
+
+    .hero h2 {
+        font-size: 3.75rem;
+    }
+    
+    /* || Layout */
+
+
+    /* || Header */
+
+    header nav {
+        width: 77%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* || Section article body*/
+
+    .article-body {
+        margin-top: 15.5em;
+    }
+
+    .article-body h3 {
+        margin-bottom: 2.8em;
+    }
+
+    /* || Article */
+
+    
+    /* || Block intro */
+
+    .intro .wr-img {
+        top: -23.5em;
+        height: 198%;
+    }
+
+    /* || Block infra */
+
+    .infra {
+        margin-top: 25.5em;
+        padding: 6.3em 0 9em;
     }
 
     .infra .wr-mobileimg .wr-img {
         bottom: -18em;
         height: 54.4em;
-        left: -4em;
-        right: initial;
-        margin-right: initial;
-        margin-left: initial;
         width: 55em;
     }
 
@@ -1023,28 +1155,8 @@ footer .wr-submenu a:focus {
         position: relative;
     }
 
-    .feature .wr-laptopimg {
-        height: initial;
-        position: initial;
-    }
-
     .feature .wr-img {
         width: 48.3%;
-        height: 76.5%;
-        top: 11.6em;
-    }
-
-    .feature .wr-laptopimg .wr-img img {
-        object-position: right center;
-    }
-
-    .feature .ctn-feature {
-        width: 48.7%;
-        margin-left: auto;
-    }
-
-    .feature h4 {
-        margin-top: 2.72em;
     }
 
     /* || Footer */
