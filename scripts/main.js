@@ -18,21 +18,26 @@ hamburger.addEventListener('click', () => {
     }
 });
 
+// closing menu on clicking outside of the manu
 document.addEventListener('click', e => {
-    // checking wheather menu is active and if so closing on clicking outside of it
-    if (document.documentElement.clientWidth <= 769 && document.querySelector('header .wr-links').classList.contains('active')) {
 
-        // get the bubbled elements to check wheather menu element among them
-        const elements = e.composedPath();
-        let isClickedMenu = false;
+    // get the bubbled elements to check wheather the click is on menu element
+    const elements = e.composedPath();
+    let isClickedMenu = false;
 
-        // here the 'elements.length - 2' is for ignoring last two element (document and window) 
-        for (let index = 0; index < elements.length - 2; index++) {
-            if (elements[index].classList.contains('wr-links') || elements[index].classList.contains('wr-hamburger')) {
-                isClickedMenu = true;
-                break;
+    // checking the click is on or inside the menu container for smaller devices
+    if (document.documentElement.clientWidth <= 769) {
+        if (document.querySelector('header .wr-links').classList.contains('active')) {
+            // here the 'elements.length - 2' is for ignoring last two element (document and window) 
+            for (let index = 0; index < elements.length - 2; index++) {
+                if (elements[index].classList.contains('wr-links') || elements[index].classList.contains('wr-hamburger')) {
+                    isClickedMenu = true;
+                    break;
+                }
             }
         }
+
+        // changes to close the menu
         if (!isClickedMenu) {
             document.querySelector('header .wr-links').classList.remove('active');
             // Changing close icon to hamburger back
@@ -44,11 +49,32 @@ document.addEventListener('click', e => {
             }
         }
     }
+
+    // checking the click is on or inside the sub menu container for larger devices
+    else {
+        // here the 'elements.length - 2' is for ignoring last two element (document and window) 
+        for (let index = 0; index < elements.length - 2; index++) {
+            if (elements[index].classList.contains('main-menu') || elements[index].classList.contains('wr-submenu')) {
+                isClickedMenu = true;
+                break;
+            }
+        }
+
+        // changes to close the sub menu
+        if (!isClickedMenu) {
+            // Collapsing sub menu if it is opened
+            if (activeMenu !== null && typeof activeMenu !== 'undefined') {
+                activeMenu.classList.remove('active');
+                activeMenu.nextElementSibling.classList.remove('active');
+            }
+        }
+    }
 });
 
 // Click event for caret or main menu
 for (const mainMenu of mainMenus) {
-    mainMenu.addEventListener('click', () => {
+    mainMenu.addEventListener('click', (event) => {
+        event.preventDefault();
         if (mainMenu.classList.contains('active')) {
             mainMenu.classList.remove('active');
             mainMenu.nextElementSibling.classList.remove('active');

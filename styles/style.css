@@ -6,27 +6,38 @@
 /* || General */
 h1 {
     /* Primary */
-    color: hsl(356, 100%, 66%); /* Light red (CTA text) */
-    color: hsl(355, 100%, 74%); /* Very light red (CTA hover background) */
-    color: hsl(208, 49%, 24%); /* Very dark blue (headings) */
+    color: hsl(356, 100%, 66%);
+    /* Light red (CTA text) */
+    color: hsl(355, 100%, 74%);
+    /* Very light red (CTA hover background) */
+    color: hsl(208, 49%, 24%);
+    /* Very dark blue (headings) */
 
     /* Neutral */
-    color: hsl(0, 0%, 100%); /* White (text) */
-    color: hsl(240, 2%, 79%); /* Grayish blue (footer text) */
-    color: hsl(207, 13%, 34%); /* Very dark grayish blue (body copy) */
-    color: hsl(240, 10%, 16%); /* Very dark black blue (footer background) */
-    
+    color: hsl(0, 0%, 100%);
+    /* White (text) */
+    color: hsl(240, 2%, 79%);
+    /* Grayish blue (footer text) */
+    color: hsl(207, 13%, 34%);
+    /* Very dark grayish blue (body copy) */
+    color: hsl(240, 10%, 16%);
+    /* Very dark black blue (footer background) */
+
     /* Gradient */
     /* Background gradient - Intro/CTA mobile nav: */
-    color: hsl(13, 100%, 72%); /* Very light red */
-    color: hsl(353, 100%, 62%); /* Light red */
-    
+    color: hsl(13, 100%, 72%);
+    /* Very light red */
+    color: hsl(353, 100%, 62%);
+    /* Light red */
+
     /* Background gradient - body: */
-    color: hsl(237, 17%, 21%); /* Very dark gray blue */
-    color: hsl(237, 23%, 32%); /* Very dark desaturated blue */
+    color: hsl(237, 17%, 21%);
+    /* Very dark gray blue */
+    color: hsl(237, 23%, 32%);
+    /* Very dark desaturated blue */
 }
 
-.ctr-content {
+.body-centered {
     width: 87.2%;
     margin-left: auto;
     margin-right: auto;
@@ -56,13 +67,13 @@ body {
     font-family: 'Overpass', sans-serif;
 }
 
-header .links a, 
+header .main-menu,
 .hero a {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
 }
 
-header .wr-mainmenu > a {
+header .main-menu {
     font-size: 1.125rem;
     line-height: 2.9;
 }
@@ -70,25 +81,22 @@ header .wr-mainmenu > a {
 header .wr-submenu a {
     font-size: 1rem;
     line-height: 2.5;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
 }
 
 .hero h2 {
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 0;
+    word-spacing: 0;
     font-size: 2.1875rem;
     line-height: 1.25;
     font-weight: 600;
-}
-
-.hero h2, 
-.infra h4 {
-    color: hsl(0, 0%, 100%);
     text-align: center;
-    letter-spacing: 0;
-    word-spacing: 0;
 }
 
-.hero p, 
-.infra p {
-    color: hsl(0, 0%, 88%);
+.hero p {
+    color: hsl(0, 4%, 94%);
 }
 
 .hero p {
@@ -100,28 +108,27 @@ header .wr-submenu a {
 
 .hero .action a {
     font-size: 1rem;
-    line-height: 2.9em;
+    line-height: 2.9;
     font-weight: 700;
     text-align: center;
 }
 
-
-.article-body h3, 
+.article-body h3,
 .article-body h4 {
     letter-spacing: 0;
     word-spacing: 0;
     line-height: 1.2;
+    text-align: center;
 }
 
-.article-body h3, 
+.article-body h3,
 .article-body h4:not(.article-body .infra h4) {
     color: hsl(208, 49%, 24%);
 }
 
-.article-body h3, 
+.article-body h3,
 .article-body h4:not(.article-body .infra h4) {
     font-size: 1.75rem;
-    text-align: center;
     font-weight: 600;
 }
 
@@ -140,6 +147,11 @@ header .wr-submenu a {
     font-size: 2.4rem;
     line-height: 1.3;
     font-weight: 500;
+    color: hsl(0, 0%, 100%);
+}
+
+.infra p {
+    color: hsl(0, 0%, 88%);
 }
 
 footer .main-menu span {
@@ -160,7 +172,8 @@ footer .wr-submenu a {
 
 /* || Layout */
 
-h3, h4 {
+h3,
+h4 {
     margin-left: 22px;
     margin-right: 22px;
 }
@@ -175,7 +188,7 @@ header nav {
     position: absolute;
     left: 0;
     right: 0;
-    top: 5.5em;
+    top: 6em;
     margin-left: 2.3em;
     margin-right: 2.3em;
 }
@@ -194,14 +207,12 @@ header .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-header .nav-menu {
     position: relative;
 }
 
 header .wr-hamburger {
     height: 1.8em;
+    cursor: pointer;
 }
 
 header .wr-hamburger img {
@@ -212,14 +223,18 @@ header .wr-links {
     position: absolute;
     right: 0;
     top: 6.2em;
-    width: 87.73vw;
+    left: 0;
     max-height: 0;
     overflow: hidden;
     transition: all 0.4s;
+    visibility: hidden;
+    border-radius: 5px;
 }
 
 header .wr-links.active {
     max-height: 60em;
+    visibility: visible;
+    box-shadow: 0px 12px 19px 5px hsl(0deg 0% 0% / 15%);
 }
 
 header .links {
@@ -233,10 +248,15 @@ header .links .caret {
     height: 7px;
     width: 10px;
     background: url(../images/icon-arrow-dark.svg) center / 100% 100% no-repeat;
+    transition: transform 0.4s;
+}
+
+header .main-menu.active .caret {
+    transform: rotate(-180deg);
 }
 
 header .links ul {
-    background-color: #efeff1;
+    background-color: hsl(240, 7%, 94%);
     border-radius: 5px;
     padding: 1.7em 0;
     margin-top: 0.7em;
@@ -246,47 +266,50 @@ header .wr-submenu {
     max-height: 0;
     overflow: hidden;
     transition: all 0.4s;
+    visibility: hidden;
 }
 
 header .wr-submenu.active {
     max-height: 26em;
+    visibility: visible;
 }
 
 header .links li {
     text-align: center;
 }
 
-header .wr-mainmenu > a:link, 
-header .wr-mainmenu > a:visited {
+header .main-menu:not(header .sign-up):link,
+header .main-menu:not(header .sign-up):visited {
     color: hsl(208, 49%, 24%);
 }
 
-header .wr-mainmenu > a:hover, 
-header .wr-mainmenu > a:active, 
-header .wr-mainmenu > a:focus {
+header .main-menu:not(header .sign-up):hover,
+header .main-menu:not(header .sign-up):active,
+header .main-menu:not(header .sign-up):focus {
     color: hsl(208, 25%, 45%);
 }
 
-header .wr-submenu a:link, 
+header .wr-submenu a:link,
 header .wr-submenu a:visited {
     color: hsl(208, 25%, 45%);
 }
 
-header .wr-submenu a:hover, 
-header .wr-submenu a:active, 
+header .wr-submenu a:hover,
+header .wr-submenu a:active,
 header .wr-submenu a:focus {
     color: hsl(208, 49%, 24%);
+    font-weight: 700;
 }
 
-hr { 
-    display: block; 
-    border: 0; 
+header hr {
+    display: block;
+    border: 0;
     border-top: 2px solid #efeff1;
-    margin: 2em 0 1.6em; 
-    padding: 0; 
+    margin: 2em 0 1.6em;
+    padding: 0;
 }
 
-header .menu-signup a {
+header .sign-up {
     width: 8.4em;
     background: linear-gradient(90deg, hsl(13, 100%, 72%), 75%, hsl(353, 100%, 62%));
     box-shadow: inset 0 0 1px 1px hsl(13deg 100% 72% / 50%);
@@ -295,9 +318,15 @@ header .menu-signup a {
     line-height: 2.7;
 }
 
-header .menu-signup a:link, 
-header .menu-signup a:visited {
+header .sign-up:link,
+header .sign-up:visited {
     color: hsl(0, 0%, 100%);
+}
+
+header .sign-up:hover,
+header .sign-up:active,
+header .sign-up:focus {
+    color: hsl(208, 25%, 45%);
 }
 
 /* || Article */
@@ -315,13 +344,13 @@ header .menu-signup a:visited {
 }
 
 .hero p {
-    margin-top: 0.8em;
+    margin-top: 1em;
 }
 
 
 .hero .action {
     text-align: center;
-    margin-top: 4.5em;
+    margin-top: 4.6em;
 }
 
 .hero .action a {
@@ -336,14 +365,14 @@ header .menu-signup a:visited {
     border: 1px solid hsl(0, 0%, 100%);
 }
 
-.hero .action .start:link, 
+.hero .action .start:link,
 .hero .action .start:visited {
     color: hsl(356, 100%, 66%);
     background-color: hsl(0, 0%, 100%);
 }
 
-.hero .action .start:hover, 
-.hero .action .start:active, 
+.hero .action .start:hover,
+.hero .action .start:active,
 .hero .action .start:focus {
     color: hsl(0, 0%, 100%);
     background-color: hsla(0, 0%, 100%, 0.3);
@@ -351,14 +380,14 @@ header .menu-signup a:visited {
     border: 1px solid hsla(0, 0%, 100%, 0.3);
 }
 
-.hero .action .learn-more:link, 
+.hero .action .learn-more:link,
 .hero .action .learn-more:visited {
     border: 1px solid hsl(0, 0%, 100%);
     color: hsl(0, 0%, 100%);
 }
 
-.hero .action .learn-more:hover, 
-.hero .action .learn-more:active, 
+.hero .action .learn-more:hover,
+.hero .action .learn-more:active,
 .hero .action .learn-more:focus {
     border: 1px solid hsl(0, 0%, 100%);
     color: hsl(356, 100%, 66%);
@@ -378,11 +407,14 @@ header .menu-signup a:visited {
 /* || Block intro */
 
 .intro .wr-editorimg {
-    height: 88.8vw;
+    height: 88.3vw;
+    position: relative;
 }
 
 .intro .wr-img {
+    position: absolute;
     height: 100%;
+    width: 100%;
 }
 
 .intro .wr-editorimg .wr-img img {
@@ -400,8 +432,8 @@ header .menu-signup a:visited {
 /* || Block infra */
 
 .infra {
-    background: url(../images/bg-pattern-circles.svg) center top -23em / 160% no-repeat, 
-    linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background: url(../images/bg-pattern-circles.svg) center top -23em / 59em no-repeat,
+        linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
     border-bottom-left-radius: 10em;
     border-top-right-radius: 10em;
     box-shadow: inset -2px -2px 3px hsl(237, 17%, 21%);
@@ -416,12 +448,19 @@ header .menu-signup a:visited {
 .infra .wr-mobileimg .wr-img {
     position: absolute;
     bottom: 1em;
-    left: -2.5em;
-    right: -2.5em;
+    height: 40.4em;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 33em;
 }
 
 .infra .wr-mobileimg .wr-img img {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .infra h4 {
@@ -431,16 +470,19 @@ header .menu-signup a:visited {
 /* || Block feature */
 
 .feature {
-    margin-top: 6.5em;
+    padding-top: 6.5em;
+    padding-bottom: 9em;
 }
-
 
 .feature .wr-laptopimg {
     height: 96vw;
+    position: relative;
 }
 
 .feature .wr-img {
+    position: absolute;
     height: 100%;
+    width: 100%;
 }
 
 .feature .wr-laptopimg .wr-img img {
@@ -460,7 +502,6 @@ header .menu-signup a:visited {
 footer {
     background-color: hsl(240, 10%, 16%);
     border-top-right-radius: 10em;
-    margin-top: 9em;
     padding-top: 8em;
 }
 
@@ -471,7 +512,6 @@ footer .nav-logo {
 footer .nav-logo a {
     padding: 0;
     height: 3.4em;
-    display: block;
 }
 
 footer .nav-logo img {
@@ -490,7 +530,7 @@ footer .wr-submenu a {
     position: relative;
 }
 
-footer .wr-submenu a:link, 
+footer .wr-submenu a:link,
 footer .wr-submenu a:visited {
     color: hsl(240, 2%, 79%);
 }
@@ -498,31 +538,35 @@ footer .wr-submenu a:visited {
 footer .wr-submenu a:hover::after {
     content: '';
     position: absolute;
-    left: 8px;
-    right: 8px;
+    left: 0px;
+    right: 0px;
     bottom: 2px;
-    height: 1.5px;
+    height: 2px;
     background-color: hsl(240, 2%, 85%);
     z-index: 1;
 }
-footer .wr-submenu a:active, 
+
+footer .wr-submenu a:active,
 footer .wr-submenu a:focus {
     color: hsl(0, 0%, 100%);
 }
 
 .attribution {
-    margin-top: 6em; 
-    font-size: 11px; text-align: center;
+    margin-top: 6em;
+    font-size: 11px;
+    text-align: center;
     padding-bottom: 1px;
     color: hsl(240, 2%, 79%);
 }
 
-.attribution a { 
-    color: hsl(240, 2%, 79%);
+.attribution a {
+    /* color: hsl(240, 2%, 79%); */
+    color: hsl(13, 100%, 72%);
+
 }
 
-.attribution a:hover { 
-    color: hsl(0, 0%, 100%); 
+.attribution a:hover {
+    color: hsl(0, 0%, 100%);
 }
 
 /* || Media query for ipads/tablets breakpoint */
@@ -540,16 +584,97 @@ footer .wr-submenu a:focus {
 
     /* || Header */
 
+    header .wr-links {
+        width: 35em;
+        left: initial;
+    }
+
+    /* || Block infra*/
+
+
+    /* || Footer */
+
+}
+
+@media screen and (min-width: 35em) {
+
+    /* || General */
+
+
+    /* || Typography */
+
+    footer .main-menu span {
+        font-size: 1rem;
+        line-height: 1;
+    }
+    
+    footer .wr-submenu a {
+        font-size: 1rem;
+        line-height: 2.1;
+    }
+
+    /* || Layout */
+
+
+    /* || Header */
+
 
     /* || Section */
 
 
     /* || Footer */
-    
+
+    footer {
+        padding-top: 7.8em;
+    }
+
+    footer .nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2em;
+        row-gap: 5em;
+        grid-template-rows: 2fr 2fr;
+    }
+
+    footer .nav-logo {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        margin-bottom: 0;
+    }
+
+    footer .menu-product {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+
+    footer .menu-company {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    footer .menu-connect {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    footer .main-menu {
+        margin-top: 0;
+    }
+
+    footer nav li {
+        text-align: left;
+    }
+
+    footer .nav-logo a {
+        text-align: left;
+    }
+
+    footer nav a {
+        padding: 0;
+    }
 }
 
 /* || Media query for small screens/laptops breakpoint */
-
 @media screen and (min-width: 48.0625em) {
 
     /* || General */
@@ -564,12 +689,40 @@ footer .wr-submenu a:focus {
     /* || Header */
 
 
-    /* || Section */
+    /* || Section article body*/
 
+
+    /* || Block intro */
 
     /* || Footer */
-    
+
+    footer .nav {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2em;
+        grid-template-rows: initial;
+    }
+
+    footer .nav-logo {
+        grid-column: initial;
+        grid-row: initial;
+    }
+
+    footer .menu-product {
+        grid-column: initial;
+        grid-row: initial;
+    }
+
+    footer .menu-company {
+        grid-column: initial;
+        grid-row: initial;
+    }
+
+    footer .menu-connect {
+        grid-column: initial;
+        grid-row: initial;
+    }
 }
+
 
 /* || Media query for Desktops/large screens breakpoint */
 
@@ -591,7 +744,7 @@ footer .wr-submenu a:focus {
 
 
     /* || Footer */
-    
+
 }
 
 /* || Media query for EX screens/TV breakpoint */
@@ -600,19 +753,310 @@ footer .wr-submenu a:focus {
 
     /* || General */
 
+    .body-centered {
+        width: 77%;
+    }
 
     /* || Typography */
 
+    header .links li {
+        text-align: left;
+    }
 
+    header .main-menu {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 3.13;
+    }
+
+    header .wr-submenu a {
+        line-height: 2.1;
+    }
+
+    .article-body h3 {
+        font-size: 2.375rem;
+    }
+
+    .article-body h4,
+    .article-body p {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero h2 {
+        font-size: 3.75rem;
+    }
+    
     /* || Layout */
 
 
     /* || Header */
 
+    header nav {
+        width: 77%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-    /* || Section */
+    header .nav {
+        position: initial;
+        justify-content: flex-start;
+    }
 
+    header .nav-logo {
+        margin-right: 5.6em;
+    }
+
+    header .nav-logo a {
+        height: 4.2em;
+    }
+
+    header .nav-menu {
+        flex: 1;
+    }
+
+    header .wr-links {
+        position: initial;
+        visibility: visible;
+        max-height: initial;
+        width: initial;
+        overflow: initial;
+    }
+
+    header .wr-hamburger {
+        display: none;
+    }
+
+    header .links {
+        display: flex;
+        background-color: initial;
+        border-radius: initial;
+        padding: 0;
+    }
+
+    header .links ul {
+        padding: 2.4em 1.7em;
+        background-color: hsl(0, 0%, 100%);
+    }
+
+    header .links>li {
+        padding-right: 0.8em;
+        padding-left: 0.8em;
+    }
+
+    header .links>li:last-child {
+        padding-left: 1.6em;
+        padding-right: 0;
+    }
+
+    header .links .caret {
+        height: 7px;
+        width: 10px;
+        background: url(../images/icon-arrow-light.svg) center / 100% 100% no-repeat;
+    }
+
+    header .wr-mainmenu {
+        position: relative;
+    }
+
+    header .main-menu {
+        position: relative;
+    }
+
+    header .main-menu:not(header .sign-up):link,
+    header .main-menu:not(header .sign-up):visited {
+        color: hsl(0, 0%, 100%);
+        opacity: 0.75;
+    }
+
+    header .main-menu:not(header .sign-up):hover,
+    header .main-menu:not(header .sign-up):active,
+    header .main-menu:not(header .sign-up):focus {
+        opacity: 1;
+    }
+
+    header .main-menu:not(header .sign-up):hover::after,
+    header .main-menu:not(header .sign-up):active::after,
+    header .main-menu:not(header .sign-up):focus::after {
+        content: '';
+        position: absolute;
+        left: 9px;
+        right: 23px;
+        bottom: 14px;
+        height: 2px;
+        background-color: hsl(0, 0%, 100%);
+        z-index: 1;
+    }
+
+    header .main-menu.login:not(header .sign-up):hover::after,
+    header .main-menu.login:not(header .sign-up):active::after,
+    header .main-menu.login:not(header .sign-up):focus::after {
+        right: 9px;
+    }
+
+    header .wr-submenu {
+        position: absolute;
+        width: 17em;
+    }
+
+    header .wr-submenu a:link,
+    header .wr-submenu a:visited {
+        color: hsl(208, 49%, 24%);
+    }
+
+    header .wr-submenu.active {
+        max-height: 27.8em;
+    }
+
+    header hr {
+        display: none;
+    }
+
+    header .menu-login {
+        margin-left: auto;
+    }
+
+    header .sign-up {
+        margin: 0;
+        width: 8.75em;
+    }
+
+    header .sign-up:link,
+    header .sign-up:visited {
+        color: hsl(356, 100%, 66%);
+        background: hsl(0, 0%, 100%);
+    }
+
+    header .sign-up:hover,
+    header .sign-up:active,
+    header .sign-up:focus {
+        color: hsl(0, 0%, 100%);
+        background: hsla(0, 0%, 100%, 0.3);
+    }
+
+    /* || Section article body*/
+
+    .article-body {
+        margin-top: 15.5em;
+    }
+
+    .article-body h3 {
+        margin-bottom: 2.8em;
+    }
+
+    /* || Article */
+
+    .hero {
+        background: url(../images/bg-pattern-intro-desktop.svg) left 27% top 52% no-repeat,
+            linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        padding-top: 18.3em;
+    }
+    
+    /* || Block intro */
+
+    .intro {
+        position: relative;
+    }
+
+    .intro .wr-editorimg {
+        height: initial;
+        position: initial;
+    }
+
+    .intro .wr-img {
+        margin-left: auto;
+        right: 0;
+        left: 0;
+        width: 45.1%;
+        top: -23.5em;
+        height: 198%;
+    }
+
+    .intro .wr-editorimg .wr-img img {
+        object-position: left center;
+    }
+
+    .intro .wrapper-content-intro {
+        width: 49%;
+        margin-right: auto;
+    }
+
+    .intro h4 {
+        margin-bottom: 0.87em;
+    }
+
+    .intro p {
+        margin-bottom: 4.7em;
+    }
+
+    /* || Block infra */
+
+    .infra {
+        margin-top: 25.5em;
+        padding: 6.3em 0 9em;
+    }
+
+    .infra .body-centered {
+        display: flex;
+    }
+
+    .infra .wr-mobileimg {
+        flex: 0 0 51.4%;
+    }
+
+    .infra .wr-mobileimg .wr-img {
+        bottom: -18em;
+        height: 54.4em;
+        left: -4em;
+        right: initial;
+        margin-right: initial;
+        margin-left: initial;
+        width: 55em;
+    }
+
+    /* || Block feature */
+
+    .feature {
+        padding-top: 23em;
+        padding-bottom: 29em;
+        position: relative;
+    }
+
+    .feature .wr-laptopimg {
+        height: initial;
+        position: initial;
+    }
+
+    .feature .wr-img {
+        width: 48.3%;
+        height: 76.5%;
+        top: 11.6em;
+    }
+
+    .feature .wr-laptopimg .wr-img img {
+        object-position: right center;
+    }
+
+    .feature .ctn-feature {
+        width: 48.7%;
+        margin-left: auto;
+    }
+
+    .feature h4 {
+        margin-top: 2.72em;
+    }
 
     /* || Footer */
-    
+
+}
+
+/* For the maximum width of devices */
+
+@media screen and (min-width: 75.0625em) {
+
+    /* || General */
+    .body-centered {
+        max-width: 2560px;
+    }
 }
