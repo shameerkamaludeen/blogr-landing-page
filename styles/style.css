@@ -1,41 +1,5 @@
-/* 
-    font-family: 'Overpass', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
- */
 
 /* || General */
-h1 {
-    /* Primary */
-    color: hsl(356, 100%, 66%);
-    /* Light red (CTA text) */
-    color: hsl(355, 100%, 74%);
-    /* Very light red (CTA hover background) */
-    color: hsl(208, 49%, 24%);
-    /* Very dark blue (headings) */
-
-    /* Neutral */
-    color: hsl(0, 0%, 100%);
-    /* White (text) */
-    color: hsl(240, 2%, 79%);
-    /* Grayish blue (footer text) */
-    color: hsl(207, 13%, 34%);
-    /* Very dark grayish blue (body copy) */
-    color: hsl(240, 10%, 16%);
-    /* Very dark black blue (footer background) */
-
-    /* Gradient */
-    /* Background gradient - Intro/CTA mobile nav: */
-    color: hsl(13, 100%, 72%);
-    /* Very light red */
-    color: hsl(353, 100%, 62%);
-    /* Light red */
-
-    /* Background gradient - body: */
-    color: hsl(237, 17%, 21%);
-    /* Very dark gray blue */
-    color: hsl(237, 23%, 32%);
-    /* Very dark desaturated blue */
-}
 
 .body-centered {
     width: 87.2%;
@@ -575,15 +539,6 @@ footer .wr-submenu a:focus {
 
 @media screen and (min-width: 30.0625em) {
 
-    /* || General */
-
-
-    /* || Typography */
-
-
-    /* || Layout */
-
-
     /* || Header */
 
     header .wr-links {
@@ -606,19 +561,10 @@ footer .wr-submenu a:focus {
     .feature .wr-laptopimg .wr-img img {
         object-fit: contain;
     }
-
-    /* || Block infra*/
-
-
-    /* || Footer */
-
 }
 
 /* || Media query for making footer break as two column */
 @media screen and (min-width: 35em) {
-
-    /* || General */
-
 
     /* || Typography */
 
@@ -631,15 +577,6 @@ footer .wr-submenu a:focus {
         font-size: 1rem;
         line-height: 2.1;
     }
-
-    /* || Layout */
-
-
-    /* || Header */
-
-
-    /* || Section */
-
 
     /* || Footer */
 
@@ -696,23 +633,6 @@ footer .wr-submenu a:focus {
 /* || Media query for small screens/laptops breakpoint */
 @media screen and (min-width: 48.0625em) {
 
-    /* || General */
-
-
-    /* || Typography */
-
-
-    /* || Layout */
-
-
-    /* || Header */
-
-
-    /* || Section article body*/
-
-
-    /* || Block intro */
-
     /* || Block feature */
 
     .feature .wr-img {
@@ -751,8 +671,6 @@ footer .wr-submenu a:focus {
 /* || Media query to fix the block images and some other breakings */
 @media screen and (min-width: 53em) {
 
-    /* || General */
-
     /* || Typography */
 
     header .links li {
@@ -783,10 +701,6 @@ footer .wr-submenu a:focus {
         margin-left: 0;
         margin-right: 0;
     }
-    
-
-    /* || Layout */
-
 
     /* || Header */
 
@@ -1029,32 +943,11 @@ footer .wr-submenu a:focus {
         width: 48.7%;
         margin-left: auto;
     }
-
-
-    /* || Footer */
-
 }
 
 /* || Media query for large laptops */
 @media screen and (min-width: 64.0625em) {
 
-    /* || General */
-
-    /* || Typography */
-    
-
-    /* || Layout */
-
-
-    /* || Header */
-
-
-    /* || Section article body*/
-
-
-    /* || Article */
-
-    
     /* || Block intro */
 
     .intro h4 {
@@ -1082,9 +975,6 @@ footer .wr-submenu a:focus {
     .feature h4 {
         margin-top: 2.72em;
     }
-
-    /* || Footer */
-
 }
 
 /* || Media query for EX screens/TV breakpoint */
@@ -1102,9 +992,6 @@ footer .wr-submenu a:focus {
     .hero h2 {
         font-size: 3.75rem;
     }
-    
-    /* || Layout */
-
 
     /* || Header */
 
@@ -1124,9 +1011,6 @@ footer .wr-submenu a:focus {
         margin-bottom: 2.8em;
     }
 
-    /* || Article */
-
-    
     /* || Block intro */
 
     .intro .wr-img {
@@ -1158,9 +1042,6 @@ footer .wr-submenu a:focus {
     .feature .wr-img {
         width: 48.3%;
     }
-
-    /* || Footer */
-
 }
 
 /* For the maximum width of devices */
