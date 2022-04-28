@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;500;600&family=Ubuntu:wght@400;500;700&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="styles/normalize.css">
@@ -28,149 +28,169 @@
   <header>
     <h1 class="hide-visually">Blogr</h1>
 
-    <div class="header ctr-content">
-      <nav>
-        <ul class="nav">
-          <li class="nav-logo">
-            <div class="wr-logo"><a href="index.html" aria-label="Home page"><img src="images/logo.svg"
-                  alt="Blogr logo"></a></div>
-          </li>
+    <nav>
+      <ul class="nav">
+        <li class="nav-logo">
+          <div class="wr-logo">
+            <a href="index.html" aria-label="Home page"><img src="images/logo.svg" alt="Blogr logo"></a>
+          </div>
+        </li>
 
-          <li class="nav-menu">
+        <li class="nav-menu">
 
-            <div class="wr-hamburger"><img src="images/icon-hamburger.svg" alt="Menu"></div>
+          <div class="wr-hamburger"><img src="images/icon-hamburger.svg" alt="Menu"></div>
 
+          <div class="wr-links">
             <ul class="links">
 
-              <li class="menu-product">
-                <a href="#">Product <span class="caret"></span></a>
-                <ul class="sub-product">
-                  <li><a href="#">Overview</a></li>
-                  <li><a href="#">Pricing</a></li>
-                  <li><a href="#">Marketplace</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Integrations</a></li>
-                </ul>
+              <li class="wr-mainmenu">
+                <a href="#" class="main-menu">Product <span class="caret"></span></a>
+                <div class="wr-submenu">
+                  <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Integrations</a></li>
+                  </ul>
+                </div>
               </li>
 
-              <li class="menu-company">
-                <a href="#">Company <span class="caret"></span></a>
-                <ul class="sub-company">
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Team</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Careers</a></li>
-                </ul>
+              <li class="wr-mainmenu">
+                <a href="#" class="main-menu">Company <span class="caret"></span></a>
+                <div class="wr-submenu">
+                  <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                  </ul>
+                </div>
               </li>
 
-              <li class="menu-connect">
-                <a href="#">Connect <span class="caret"></span></a>
-                <ul class="sub-connect">
-                  <li href="#">Contact</li>
-                  <li href="#">Newsletter</li>
-                  <li href="#">LinkedIn</li>
-                </ul>
+              <li class="wr-mainmenu">
+                <a href="#" class="main-menu">Connect <span class="caret"></span></a>
+                <div class="wr-submenu">
+                  <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                  </ul>
+                </div>
                 <hr>
               </li>
 
-              <li class="menu-login"><a href="#" class="login">Login</a></li>
+              <li class="wr-mainmenu menu-login"><a href="#" class="main-menu login">Login</a></li>
 
-              <li class="menu-signup"><a href="#" class="sign-up">Sign Up</a></li>
+              <li class="wr-mainmenu menu-signup"><a href="#" class="main-menu sign-up">Sign Up</a></li>
             </ul>
+          </div>
 
-          </li>
-        </ul>
+        </li>
+      </ul>
 
-      </nav>
-    </div>
-
+    </nav>
   </header>
 
   <main>
     <article>
 
       <div class="hero">
-        <div class="ctr-content">
+        <div class="body-centered">
           <h2>A modern publishing platform</h2>
 
           <p>Grow your audience and build your online brand</p>
 
           <div class="action">
             <a href="#" class="start">Start for Free</a>
-            <a href="" class="learn-more">Learn More</a>
+            <a href="#" class="learn-more">Learn More</a>
           </div>
 
         </div>
       </div>
 
-      <section>
+      <section class="article-body">
 
-        <h3 class="ctr-content">Designed for the future</h3>
+        <h3 class="body-centered">Designed for the future</h3>
 
         <div class="intro">
 
-          <div class="wr-editorimg ctr-content">
-            <picture>
-              <source media="(max-width: 30em)" srcset="images/illustration-editor-mobile.svg">
-              <source media="(min-width: 30.0625em)" srcset="images/illustration-editor-desktop.svg">
-              <img src="images/illustration-editor-desktop.svg" alt="Illustration of editor">
-            </picture>
+          <div class="wr-editorimg">
+            <div class="wr-img">
+              <picture>
+                <source media="(max-width: 48em)" srcset="images/illustration-editor-mobile.svg">
+                <source media="(min-width: 48.0625em)" srcset="images/illustration-editor-desktop.svg">
+                <img src="images/illustration-editor-desktop.svg" alt="Illustration of editor">
+              </picture>
+            </div>
           </div>
 
-          <div class="cnt-intro ctr-content">
+          <div class="body-centered">
+            <div class="wrapper-content-intro">
+              <h4>Introducing an extensible editor</h4>
 
-            <h4>Introducing an extensible editor</h4>
+              <p> Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+                The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+                videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.</p>
 
-            <p> Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
-              The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
-              videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
-              change the looks of a blog.</p>
+              <h4>Robust content management</h4>
 
-            <h4>Robust content management</h4>
+              <p>Flexible content management enables users to easily move through posts. Increase the usability of your
+                blog by adding customized categories, sections, format, or flow. With this functionality, you&apos;re in
+                full control.</p>
+            </div>
 
-            <p>Flexible content management enables users to easily move through posts. Increase the usability of your
-              blog by adding customized categories, sections, format, or flow. With this functionality, you&apos;re in
-              full control.</p>
-          </div>
-
-        </div>
-
-        <div class="infra ctr-content">
-
-          <h4>State of the Art Infrastructure</h4>
-
-          <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
-            connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your
-            site competitive.</p>
-
-          <div class="wr-mobileimg">
-            <img src="images/illustration-phones.svg" alt="Illustration of mobile phones">
           </div>
         </div>
 
-        <div class="feature ctr-content">
+        <div class="infra">
+          <div class="body-centered">
+
+            <div class="wr-mobileimg">
+              <div class="wr-img">
+                <img src="images/illustration-phones.svg" alt="Illustration of mobile phones">
+              </div>
+            </div>
+
+            <div class="wr-cnt-infra">
+              <h4>State of the Art Infrastructure</h4>
+
+              <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
+                connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your
+                site competitive.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature">
 
           <div class="wr-laptopimg">
-            <picture>
-              <source media="(max-width: 30em)" srcset="images/illustration-laptop-mobile.svg">
-              <source media="(min-width: 30.0625em)" srcset="images/illustration-laptop-desktop.svg">
-              <img src="images/illustration-laptop-desktop.svg" alt="Illustration of laptop">
-            </picture>
+            <div class="wr-img">
+              <picture>
+                <source media="(max-width: 48em)" srcset="images/illustration-laptop-mobile.svg">
+                <source media="(min-width: 48.0625em)" srcset="images/illustration-laptop-desktop.svg">
+                <img src="images/illustration-laptop-desktop.svg" alt="Illustration of laptop">
+              </picture>
+            </div>
           </div>
 
-          <div class="ctn-feature">
+          <div class="body-centered">
+            <div class="ctn-feature">
+              <h4>Free, open, simple</h4>
 
-            <h4>Free, open, simple</h4>
+              <p>Blogr is a free and open source application backed by a large community of helpful developers. It
+                supports features such as code syntax highlighting, RSS feeds, social media integration, third-party
+                commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is
+                relatively
+                easy to learn.</p>
 
-            <p>Blogr is a free and open source application backed by a large community of helpful developers. It
-              supports features such as code syntax highlighting, RSS feeds, social media integration, third-party
-              commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively
-              easy to learn.</p>
-
-            <h4>Powerful tooling</h4>
-            <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and
-              deployment a breeze, but capable of producing even the most complicated sites.</p>
+              <h4>Powerful tooling</h4>
+              <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and
+                deployment a breeze, but capable of producing even the most complicated sites.</p>
+            </div>
           </div>
+
         </div>
 
       </section>
@@ -180,51 +200,60 @@
   </main>
 
   <footer>
-    <div class="ctr-content">
 
-      <img src="images/logo.svg" alt="Blogr">
+    <nav class="body-centered">
+      <ul class="nav">
 
-      <nav>
-        <ul class="nav">
+        <li class="nav-logo">
+          <div class="wr-logo">
+            <a href="index.html" aria-label="Home page"><img src="images/logo.svg" alt="Blogr logo"></a>
+          </div>
+        </li>
 
-          <li class="menu-product">
-            <a href="#">Product</a>
-            <ul class="sub-product">
+        <li class="menu-product">
+          <div class="main-menu"><span>Product</span></div>
+          <div class="wr-submenu">
+            <ul>
               <li><a href="#">Overview</a></li>
               <li><a href="#">Pricing</a></li>
               <li><a href="#">Marketplace</a></li>
               <li><a href="#">Features</a></li>
               <li><a href="#">Integrations</a></li>
             </ul>
-          </li>
+          </div>
+        </li>
 
-          <li class="menu-company">
-            <a href="#">Company</a>
-            <ul class="sub-company">
+        <li class="menu-company">
+          <div class="main-menu"><span>Company</span></div>
+          <div class="wr-submenu">
+            <ul>
               <li><a href="#">About</a></li>
               <li><a href="#">Team</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Careers</a></li>
             </ul>
-          </li>
+          </div>
+        </li>
 
-          <li class="menu-connect">
-            <a href="#">Connect</a>
-            <ul class="sub-connect">
-              <li href="#">Contact</li>
-              <li href="#">Newsletter</li>
-              <li href="#">LinkedIn</li>
+        <li class="menu-connect">
+          <div class="main-menu"><span>Connect</span></div>
+          <div class="wr-submenu">
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">LinkedIn</a></li>
             </ul>
-            <hr>
-          </li>
+          </div>
+        </li>
 
-        </ul>
-      </nav>
+      </ul>
+    </nav>
 
-      <div class="attribution">
+    <div class="attribution">
+      <p class="body-centered">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
-        <a href="https://twitter.com/ShameerKamalud1">Shameer Kamaludeen</a>.
-      </div>
+        <a href="https://twitter.com/ShameerKamalud1" target="_blank">Shameer Kamaludeen</a>.
+      </p>
     </div>
 
   </footer>
