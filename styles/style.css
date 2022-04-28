@@ -1,3 +1,35 @@
+h1 {
+    /* Primary */
+    color: hsl(356, 100%, 66%);
+    /* Light red (CTA text) */
+    color: hsl(355, 100%, 74%);
+    /* Very light red (CTA hover background) */
+    color: hsl(208, 49%, 24%);
+    /* Very dark blue (headings) */
+
+    /* Neutral */
+    color: hsl(0, 0%, 100%);
+    /* White (text) */
+    color: hsl(240, 2%, 79%);
+    /* Grayish blue (footer text) */
+    color: hsl(207, 13%, 34%);
+    /* Very dark grayish blue (body copy) */
+    color: hsl(240, 10%, 16%);
+    /* Very dark black blue (footer background) */
+
+    /* Gradient */
+    /* Background gradient - Intro/CTA mobile nav: */
+    color: hsl(13, 100%, 72%);
+    /* Very light red */
+    color: hsl(353, 100%, 62%);
+    /* Light red */
+
+    /* Background gradient - body: */
+    color: hsl(237, 17%, 21%);
+    /* Very dark gray blue */
+    color: hsl(237, 23%, 32%);
+    /* Very dark desaturated blue */
+}
 
 /* || General */
 
@@ -29,6 +61,7 @@ body {
     letter-spacing: 0.2px;
     word-spacing: 0.8px;
     font-family: 'Overpass', sans-serif;
+    background: linear-gradient(to right, hsl(0, 0%, 98%), hsl(0, 0%, 100%))
 }
 
 header .main-menu,
