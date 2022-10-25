@@ -66,7 +66,6 @@ Got the opportunity to thorough my knowledge on how to design an entire landing 
 
 - Github - [Shameer Kamaludeen](https://github.com/shameerkamaludeen)
 - Frontend Mentor - [@shameerkamaludeen](https://www.frontendmentor.io/profile/shameerkamaludeen)
-- Twitter - [@ShameerKamalud1](https://twitter.com/ShameerKamalud1)
 
 ## Acknowledgments
 
